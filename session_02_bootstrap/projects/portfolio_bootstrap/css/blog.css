@@ -1,0 +1,218 @@
+/* ============================================
+   blog.css — Bai 2.2: Blog Layout + Sidebar
+   ============================================ */
+
+/* --- Blog Cards --- */
+.blog-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 20px rgba(15, 110, 86, 0.08);
+  transform: translateY(-2px);
+}
+
+.blog-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.blog-card-title a {
+  color: var(--color-navy);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.blog-card-title a:hover {
+  color: var(--color-teal);
+}
+
+.blog-card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card-excerpt {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.read-more-link {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-teal);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more-link:hover {
+  color: var(--color-teal-light);
+}
+
+/* --- Badges --- */
+.badge-custom {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.badge-teal {
+  background-color: var(--color-teal-pale);
+  color: var(--color-teal);
+}
+
+.badge-slate {
+  background-color: #f0ede8;
+  color: var(--color-navy-mid);
+}
+
+/* --- Pagination --- */
+.pagination-custom .page-link {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-teal);
+  border-color: var(--color-border);
+  background-color: transparent;
+  padding: 0.4rem 0.85rem;
+  margin: 0 2px;
+  border-radius: var(--radius-sm) !important;
+}
+
+.pagination-custom .page-link:hover {
+  background-color: var(--color-teal-pale);
+  border-color: var(--color-teal-light);
+  color: var(--color-teal);
+}
+
+.pagination-custom .page-item.active .page-link {
+  background-color: var(--color-teal);
+  border-color: var(--color-teal);
+  color: #fff;
+}
+
+/* --- Sidebar --- */
+.sidebar-sticky {
+  top: 80px;
+}
+
+.sidebar-section {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: #fff;
+  padding: 1.25rem;
+}
+
+.sidebar-heading {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Categories list */
+.sidebar-list .list-group-item {
+  border-color: #f0ede8;
+  padding: 0.5rem 0;
+  font-size: 0.88rem;
+  background-color: transparent;
+}
+
+.sidebar-list .list-group-item a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.sidebar-list .list-group-item a:hover {
+  color: var(--color-teal);
+}
+
+.count-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-teal);
+  background-color: var(--color-teal-pale);
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+}
+
+/* Recent posts */
+.recent-list {
+  margin: 0;
+}
+
+.recent-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #f0ede8;
+  gap: 0.5rem;
+}
+
+.recent-post-item:last-child {
+  border-bottom: none;
+}
+
+.recent-post-item a {
+  font-size: 0.87rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.recent-post-item a:hover {
+  color: var(--color-teal);
+}
+
+.recent-date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #aaa;
+  white-space: nowrap;
+}
+
+/* Tags Cloud */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  background-color: #f0ede8;
+  color: var(--color-navy-mid);
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.tag-pill:hover {
+  background-color: var(--color-teal-pale);
+  color: var(--color-teal);
+}
